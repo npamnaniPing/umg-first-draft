@@ -15,7 +15,10 @@ languageSelect.addEventListener('change', () => {
 
 // Update content based on the selected language
 function updateLanguage(lang) {
-    const content = {{global.company.variables.languageData}}[lang]?.data;
+    let content = "{{global.company.variables.languageData}}";
+    content = JSON.parse(content);
+    content = [lang]?.data;
+
     if (content) {
         document.getElementById('greeting-text').innerText = content.greetings;
         document.getElementById('page-info').innerText = content.nextPageText;
