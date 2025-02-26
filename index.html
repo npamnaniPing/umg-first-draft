@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="ping-container">
+        <!-- Language Dropdown -->
+        <div class="language-container">
+            <select id="languageSelect" class="language-select ping-button">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="pt">Portuguese</option>
+                <option value="zh">Chinese</option>
+                <option value="fr">French</option>
+                <option value="nl">Dutch</option>
+            </select>
+        </div>
+
+        <div class="ping-body-container">
+            <h1 id="greeting-text">
+greetings {{greetings}}
+✕</h1>
+            <p id="page-info">
+nextPageText {{nextPageText}}
+✕</p>
+            <br>
+
+            <!-- Form to hold the hidden input and handle submission -->
+            <form id="languageForm">
+                <!-- Hidden input to store the selected language -->
+                <input type="hidden" id="selectedLanguage" name="selectedLanguage" value="">
+
+                <!-- Hidden Submit Button (Single Line) -->
+                <button id="DVSubmitBtn" type="submit" style="display:none;" 
+                    class="ping-button" data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skbuttonvalue="next-Button" data-skform="languageForm">
+                </button>
+            </form>
+
+            <!-- Visible Next Button -->
+            <button id="next-button" type="button" class="ping-button">
+                <span>
+nextButton {{nextButton}}
+✕</span>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
