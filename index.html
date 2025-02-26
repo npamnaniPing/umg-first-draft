@@ -24,12 +24,8 @@
         </div>
 
         <div class="ping-body-container">
-            <h1 id="greeting-text">
-greetings {{greetings}}
-✕</h1>
-            <p id="page-info">
-nextPageText {{nextPageText}}
-✕</p>
+            <h1 id="greeting-text">{{greetings | translate }}</h1>
+            <p id="page-info">{{nextPageText | translate }}</p>
             <br>
 
             <!-- Form to hold the hidden input and handle submission -->
@@ -45,9 +41,7 @@ nextPageText {{nextPageText}}
 
             <!-- Visible Next Button -->
             <button id="next-button" type="button" class="ping-button">
-                <span>
-nextButton {{nextButton}}
-✕</span>
+                <span>{{nextButton | translate }}</span>
             </button>
         </div>
     </div>
